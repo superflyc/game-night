@@ -1,0 +1,27 @@
+@import '~@angular/material/theming';
+
+// Styles that are based on the current theme.
+@mixin game-night-theme($theme) {
+  $primary: map-get($theme, primary);
+  $accent: map-get($theme, accent);
+  $warn: map-get($theme, warn);
+  $background: map-get($theme, background);
+  $foreground: map-get($theme, foreground);
+
+  $inverseText: white;
+  $config: mat-typography-config();
+
+  header {
+    background-color: mat-color($primary, 400);
+    color: $inverseText;
+    padding: 20px 0px 15px 30px;
+    text-transform: uppercase;
+
+    h1 {
+      font: {
+        size: mat-font-size($config, headline);
+        weight: 100;
+      }
+    }
+  }
+}

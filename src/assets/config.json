@@ -1,0 +1,12 @@
+{
+  "menuItems": [
+    {
+      "name": "Cards",
+      "path": "cards"
+    },
+    {
+      "name": "Board",
+      "path": "board"
+    }
+  ]
+}

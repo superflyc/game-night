@@ -1,0 +1,8 @@
+  <mat-toolbar color="primary" class="mat-elevation-z6">
+    <a mat-button routerLink="">
+      <mat-icon>casino</mat-icon>
+      Game Night</a>
+    <a *ngFor="let item of menuItems" [routerLink]="item.path" mat-button>{{item.name}}</a>
+    <div style="flex-grow: 1"></div>
+    <a mat-button>Lorem Ipsum</a>
+  </mat-toolbar>

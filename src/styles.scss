@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+
+//material theme functions
+@import '~@angular/material/theming';
+
+//main theme
+$primary: mat-palette($mat-indigo);
+$accent: mat-palette($mat-pink, A200, A100, A400);
+$warn: mat-palette($mat-red);
+$theme: mat-light-theme($primary, $accent, $warn);
+
+//dark theme
+$dark-primary: mat-palette($mat-grey, 900);
+$dark-accent: mat-palette($mat-blue, A200, A100, A400);
+$dark-warn: mat-palette($mat-red);
+$dark-theme: mat-dark-theme($dark-primary, $dark-accent, $dark-warn);
+
+//these two lines obviate the need to reference the theme in angular.json
+//non-theme styles for core
+@include mat-core();
+// primary angular material theme
+@include angular-material-theme($theme);
+// dark angular material theme
+.dark-theme {
+  @include angular-material-theme($dark-theme);
+}
+
+//custom theme styles
+@import './theme.scss';
+@include game-night-theme($theme);
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
